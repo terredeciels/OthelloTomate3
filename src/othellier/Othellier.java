@@ -13,7 +13,6 @@ public class Othellier {
     private ArrayList<byte[][]>[][] TBitboard;
     public ArrayList[][] BITBOARDS;
     private Case point_depart;
-    private int comptage;
 
     public ArrayList[][] TBitboardToLongHexa() {
         ArrayList res[][] = new ArrayList[9][9];
@@ -36,7 +35,7 @@ public class Othellier {
 
                     }
                     res[i][j].add(longhexa);
-                   
+
                     longhexa = "";
                 }
             }
@@ -53,7 +52,6 @@ public class Othellier {
                 initialiser();
             }
         }
-//        System.out.println(comptage++);
         BITBOARDS = TBitboardToLongHexa();
     }
 
@@ -79,7 +77,6 @@ public class Othellier {
             curseur._case = point_depart.copy();
         }
         TBitboard[point_depart.X][point_depart.Y] = caseBitboards;
-//        System.out.println(this.toString());
     }
 
     @Override
@@ -87,7 +84,7 @@ public class Othellier {
         String res = "";
 
         ArrayList<byte[][]> LB = TBitboard[point_depart.X][point_depart.Y];
-//        System.out.println(LB.size());
+
         for (int d = 0; d < LB.size(); d++) {
             for (int i = 1; i <= 8; i++) {
                 for (int j = 1; j <= 8; j++) {
@@ -96,7 +93,6 @@ public class Othellier {
                 res += '\n';
             }
 
-            comptage++;
             res += '\n';
         }
 

@@ -6,7 +6,7 @@ public class FormatNumberTest {
 
  
     public static void main(String[] args) {
-        String s = "0000000000000000000000000000000000010000000100000001000000010000";
+        String s = "0100000000000000000000000000000000010000000100000001000000010000";
 //         String s = "10000000100000001000000010000";
             Long r=     Long.parseLong(s, 2);
       
